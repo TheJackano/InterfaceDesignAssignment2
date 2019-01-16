@@ -8,46 +8,22 @@ public class CollectablesCollider : MonoBehaviour {
 
 	void Start()
 	{
-		GameObject ccgo = GameObject.Find ("CollectablesController");
+		GameObject ccgo = GameObject.Find ("_CollectablesController");
 		cc = ccgo.GetComponent<CollectablesController>();
 	}
 
 	void OnTriggerEnter(Collider col)
 	{
-		if (gameObject.name.Contains("Aid Box"))
+		if (gameObject.tag == "Collectable")
 		{
-			Debug.Log ("You've collected a useful aid box!");
-		}
-		else if (gameObject.name.Contains("Gem"))
-		{
-			Debug.Log ("You've collected a shiny gem!");
-		}
-		else if (gameObject.name.Contains("Chicken Leg"))
-		{
-			Debug.Log ("You've collected a tasty chicken leg!");
-		}
-		else if (gameObject.name.Contains("PlaceCave"))
-		{
-			Debug.Log ("You've discovered the mushroom cave!");
-		}
-		else if (gameObject.name.Contains("PlacePark"))
-		{
-			Debug.Log ("You've discovered the park!");
-		}
-		else if (gameObject.name.Contains("PlaceGrandTree"))
-		{
-			Debug.Log ("You've discovered the grand tree!");
-		}
-		else if (gameObject.name.Contains("PlaceVillage"))
-		{
-			Debug.Log ("You've discovered the village!");
-		}
-		else if (gameObject.name.Contains("PlaceCamp"))
-		{
-			Debug.Log ("You've discovered the camp!");
-		}
-
-		cc.IncrementCount (gameObject);
+			Debug.Log ("You've collected an object");
+            cc.IncrementCount(gameObject);
+        }
+		else if(gameObject.tag == "Place")
+        {
+            Debug.Log("You walked into a place");
+            cc.AddPlaceToList(gameObject);
+        }
 		Destroy (gameObject);
 	}
 }
