@@ -2,12 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
 
     public Camera camera;
     public NavMeshAgent agent;
+
+    public Text StepsTakenTextField;
+    public static float StepsTaken;
+
+    private bool hasFirstClicked = false;
 
     Animator myAnim;
     float dist;
@@ -29,6 +35,7 @@ public class PlayerController : MonoBehaviour
         {
 
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+            hasFirstClicked = true;
 
             if (Physics.Raycast(ray, out hit))
             {
@@ -42,11 +49,18 @@ public class PlayerController : MonoBehaviour
         newRotation.z = 0.0f;
         transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, rotSpeed * Time.deltaTime);
 
-        dist = Vector3.Distance(hit.point, transform.position);
-        //Debug.Log ("Distance: " + dist);
-        if (dist < 1f)
+        if(hasFirstClicked) dist = Vector3.Distance(hit.point, transform.position);
+
+        if (dist < 1.1f)
         {
             myAnim.SetBool("isRunning", false);
+            agent.isStopped = true;
+        }
+        else
+        {
+            agent.isStopped = false;
+            StepsTaken += 4f * Time.deltaTime;
+            StepsTakenTextField.text = ((int)StepsTaken).ToString();
         }
     }
 }

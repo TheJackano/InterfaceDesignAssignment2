@@ -16,12 +16,10 @@ public class CollectablesCollider : MonoBehaviour {
 	{
 		if (gameObject.tag == "Collectable")
 		{
-			Debug.Log ("You've collected an object");
             cc.IncrementCount(gameObject);
         }
 		else if(gameObject.tag == "Place")
         {
-            Debug.Log("You walked into a place");
             cc.AddPlaceToList(gameObject);
         }
 		Destroy (gameObject);

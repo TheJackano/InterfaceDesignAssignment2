@@ -17,6 +17,13 @@ public class CollectablesController : MonoBehaviour {
     public Animator sideMenuAnim;
     public bool sideMenuIsShowing = false;
 
+    public Text HealthPackTextField, GemsTextField, FoodTextField, PointsTextField;
+
+    public Image healthBar;
+
+    private int placesVisted, itemsCollected;
+    public int Points;
+
     void Awake()
 	{
 		DontDestroyOnLoad (gameObject);
@@ -37,6 +44,8 @@ public class CollectablesController : MonoBehaviour {
 			Debug.Log("Saving Data..");
 			SaveData();
 		}
+        UpdateHealthBar();
+        UpdatePoints();
 	}
 
     void Start()
@@ -48,26 +57,21 @@ public class CollectablesController : MonoBehaviour {
 		if (go.name.Contains("Aid Box"))
 		{
 			cd [0].CollectablesNumber++;
-		}
+            HealthPackTextField.text = cd[0].CollectablesNumber.ToString();
+
+        }
 		else if (go.name.Contains("Gem"))
 		{
 			cd [1].CollectablesNumber++;
-		}
+            GemsTextField.text = cd[1].CollectablesNumber.ToString();
+        }
 		else if (go.name.Contains("Chicken Leg"))
 		{
 			cd [2].CollectablesNumber++;
-		}
-		OutputCounts ();
-	}
-
-	void OutputCounts()
-	{
-		Debug.Log ("Statistics");
-		Debug.Log ("Aid Box: " + cd [0].CollectablesNumber);
-		Debug.Log ("Gems: " + cd [1].CollectablesNumber);
-		Debug.Log ("Chicken Leg: " + cd [2].CollectablesNumber);
-
-	}
+            FoodTextField.text = cd[2].CollectablesNumber.ToString();
+        }
+        itemsCollected += 1;
+    }
 	public void SaveData()
 	{
 		BinaryFormatter bf = new BinaryFormatter ();
@@ -129,10 +133,25 @@ public class CollectablesController : MonoBehaviour {
             prefabPlacesList.transform.Find("Image").GetComponent<Image>().sprite = pd[4].placeImage;
             prefabPlacesList.GetComponentInChildren<Text>().text = pd[4].placeDescription;
         }
+        placesVisted += 1;
+        Debug.Log(placesVisted);
+        ShowSideMenu();
     }
     public void ShowSideMenu()
     {
         sideMenuAnim.enabled = true;
         sideMenuAnim.Play("sideMenuShow");
+    }
+    public void UpdateHealthBar()
+    {
+        healthBar.fillAmount -= 0.01f * Time.deltaTime;
+        if(healthBar.fillAmount <= 0) Debug.Log("Times UP");
+
+    }
+    public void UpdatePoints()
+    {
+        Points = (int)(itemsCollected * 10 + placesVisted * 100 - PlayerController.StepsTaken);
+        if (Points <= 0) Points = 0;
+        PointsTextField.text = Points.ToString();
     }
 }
