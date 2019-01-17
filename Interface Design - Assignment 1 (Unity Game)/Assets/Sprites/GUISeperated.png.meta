@@ -1,0 +1,688 @@
+fileFormatVersion: 2
+guid: 15bfc596e87d12941be0ffd90b73842f
+timeCreated: 1547727754
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: GUISeperated_0
+    21300002: GUISeperated_1
+    21300004: GUISeperated_2
+    21300006: GUISeperated_3
+    21300008: GUISeperated_4
+    21300010: GUISeperated_5
+    21300012: GUISeperated_6
+    21300014: GUISeperated_7
+    21300016: GUISeperated_8
+    21300018: GUISeperated_9
+    21300020: GUISeperated_10
+    21300022: GUISeperated_11
+    21300024: GUISeperated_12
+    21300026: GUISeperated_13
+    21300028: GUISeperated_14
+    21300030: GUISeperated_15
+    21300032: GUISeperated_16
+    21300034: GUISeperated_17
+    21300036: GUISeperated_18
+    21300038: GUISeperated_19
+    21300040: GUISeperated_20
+    21300042: GUISeperated_21
+    21300044: GUISeperated_22
+    21300046: GUISeperated_23
+    21300048: GUISeperated_24
+    21300050: GUISeperated_25
+    21300052: GUISeperated_26
+    21300054: GUISeperated_27
+    21300056: GUISeperated_28
+    21300058: GUISeperated_29
+    21300060: GUISeperated_30
+    21300062: GUISeperated_31
+    21300064: GUISeperated_32
+    21300066: GUISeperated_33
+    21300068: GUISeperated_34
+    21300070: GUISeperated_35
+    21300072: GUISeperated_36
+    21300074: GUISeperated_37
+    21300076: GUISeperated_38
+    21300078: GUISeperated_39
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GUISeperated_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2325
+        width: 585
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_1
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 2331
+        width: 586
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_2
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 2337
+        width: 578
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_3
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1720
+        width: 110
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_4
+      rect:
+        serializedVersion: 2
+        x: 2172
+        y: 1715
+        width: 117
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_5
+      rect:
+        serializedVersion: 2
+        x: 2306
+        y: 1715
+        width: 117
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_6
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 2250
+        width: 53
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_7
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 2247
+        width: 93
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_8
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 2246
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_9
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 2243
+        width: 53
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_10
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 2232
+        width: 149
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_11
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 2138
+        width: 116
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_12
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 1835
+        width: 220
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_13
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 1832
+        width: 230
+        height: 474
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_14
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 1832
+        width: 229
+        height: 474
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_15
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 2138
+        width: 479
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_16
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 1712
+        width: 62
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_17
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 1712
+        width: 399
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_18
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1934
+        width: 746
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_19
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1405
+        width: 753
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_20
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 1363
+        width: 220
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_21
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 1338
+        width: 237
+        height: 483
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_22
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 1637
+        width: 90
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_23
+      rect:
+        serializedVersion: 2
+        x: 1597
+        y: 1521
+        width: 378
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_24
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 1524
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_25
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 1519
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_26
+      rect:
+        serializedVersion: 2
+        x: 2023
+        y: 1543
+        width: 322
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_27
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1215
+        width: 553
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_28
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 1324
+        width: 1126
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_29
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 1031
+        width: 561
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_30
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 727
+        width: 501
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_31
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 848
+        width: 1219
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_32
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 845
+        width: 561
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_33
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 736
+        width: 428
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_34
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 723
+        width: 436
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_35
+      rect:
+        serializedVersion: 2
+        x: 2005
+        y: 723
+        width: 436
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_36
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 564
+        width: 744
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_37
+      rect:
+        serializedVersion: 2
+        x: 1681
+        y: 0
+        width: 746
+        height: 679
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_38
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 464
+        width: 744
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GUISeperated_39
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 359
+        width: 752
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
