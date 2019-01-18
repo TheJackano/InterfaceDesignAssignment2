@@ -24,7 +24,7 @@ public class CollectablesCollider : MonoBehaviour {
         }
         if (gameObject.name.Contains("Special Axe"))
         {
-            cc.SpecialItem(gameObject);
+            cc.SpecialItemColision(gameObject);
         }
         else
         {

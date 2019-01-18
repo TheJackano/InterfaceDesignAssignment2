@@ -1,8 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine.UI;
 
 public class CollectablesController : MonoBehaviour
@@ -22,8 +20,21 @@ public class CollectablesController : MonoBehaviour
 
     public Image healthBar;
 
+    public GameObject PopUpCanvas;
+    private bool canPopUpBeTriggered = true;
+
     private int placesVisted, itemsCollected;
-    public int Points;
+    private int Points;
+    private int AmountOfPointsToAdd;
+
+    private float currentTime;
+    private float whenInteractableTime;
+
+    private GameObject SpecialAxe;
+
+    public static bool isGamePaused = false;
+
+    public Text PickUpResult;
 
     void Awake()
     {
@@ -35,18 +46,11 @@ public class CollectablesController : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown("l"))
-        {
-            Debug.Log("Loading Data..");
-            LoadData();
-        }
-        else if (Input.GetKeyDown("s"))
-        {
-            Debug.Log("Saving Data..");
-            SaveData();
-        }
         UpdateHealthBar();
         UpdatePoints();
+        currentTime = Time.time;
+
+        if ((whenInteractableTime < currentTime) && (canPopUpBeTriggered == false)) canPopUpBeTriggered = true;
     }
 
     void Start()
@@ -73,29 +77,6 @@ public class CollectablesController : MonoBehaviour
         }
         itemsCollected += 1;
     }
-    public void SaveData()
-    {
-        BinaryFormatter bf = new BinaryFormatter();
-        FileStream fs = File.Create(Application.persistentDataPath + "/gameData.dat");
-        bf.Serialize(fs, cd);
-        fs.Close();
-        Debug.Log("Saved Data");
-    }
-    public void LoadData()
-    {
-        if (File.Exists(Application.persistentDataPath + "/gameData.dat"))
-        {
-            BinaryFormatter bf = new BinaryFormatter();
-            FileStream fs = File.Open(Application.persistentDataPath + "/gameData.dat", FileMode.Open);
-            cd = (CollectablesData[])bf.Deserialize(fs);
-            fs.Close();
-            Debug.Log("Loaded Data");
-        }
-        else
-        {
-            Debug.LogError("The file you are trying to load is missing!");
-        }
-    }
     public void AddPlaceToList(GameObject go)
     {
         prefabPlacesList = Instantiate(prefabPlacesList);
@@ -105,37 +86,31 @@ public class CollectablesController : MonoBehaviour
 
         if (go.name.Contains("PlaceCave"))
         {
-            Debug.Log("You've discovered the mushroom cave!");
             prefabPlacesList.transform.Find("Image").GetComponent<Image>().sprite = pd[0].placeImage;
             prefabPlacesList.GetComponentInChildren<Text>().text = pd[0].placeDescription;
 
         }
         else if (go.name.Contains("PlacePark"))
         {
-            Debug.Log("You've discovered the park!");
             prefabPlacesList.transform.Find("Image").GetComponent<Image>().sprite = pd[1].placeImage;
             prefabPlacesList.GetComponentInChildren<Text>().text = pd[1].placeDescription;
         }
         else if (go.name.Contains("PlaceGrandTree"))
         {
-            Debug.Log("You've discovered the grand tree!");
             prefabPlacesList.transform.Find("Image").GetComponent<Image>().sprite = pd[2].placeImage;
             prefabPlacesList.GetComponentInChildren<Text>().text = pd[2].placeDescription;
         }
         else if (go.name.Contains("PlaceVillage"))
         {
-            Debug.Log("You've discovered the village!");
             prefabPlacesList.transform.Find("Image").GetComponent<Image>().sprite = pd[3].placeImage;
             prefabPlacesList.GetComponentInChildren<Text>().text = pd[3].placeDescription;
         }
         else if (go.name.Contains("PlaceCamp"))
         {
-            Debug.Log("You've discovered the camp!");
             prefabPlacesList.transform.Find("Image").GetComponent<Image>().sprite = pd[4].placeImage;
             prefabPlacesList.GetComponentInChildren<Text>().text = pd[4].placeDescription;
         }
         placesVisted += 1;
-        Debug.Log(placesVisted);
         ShowSideMenu();
     }
     public void ShowSideMenu()
@@ -151,12 +126,44 @@ public class CollectablesController : MonoBehaviour
     }
     public void UpdatePoints()
     {
-        Points = (int)(itemsCollected * 10 + placesVisted * 100 - PlayerController.StepsTaken);
+        Points = (int)(itemsCollected * 10 + placesVisted * 100 - PlayerController.StepsTaken + AmountOfPointsToAdd);
         if (Points <= 0) Points = 0;
         PointsTextField.text = Points.ToString();
     }
-    public void SpecialItem(GameObject go)
+    public void SpecialItemColision(GameObject go)
     {
-        Debug.Log("Touching Axe");
+        SpecialAxe = go;
+        if (canPopUpBeTriggered == true)
+        {
+            
+            Time.timeScale = 0;
+            isGamePaused = true;
+            PopUpCanvas.SetActive(true);
+
+        }
+    }
+    public void ClosePopUp()
+    {
+        canPopUpBeTriggered = false;
+        Time.timeScale = 1;
+        isGamePaused = false;
+        whenInteractableTime = currentTime + 5;
+    }
+    public void PickUp()
+    {
+        AmountOfPointsToAdd = (int)(Random.Range(-200.0f, 200.0f));
+        if (AmountOfPointsToAdd > 0)
+        {
+            PickUpResult.text = ("You won " + AmountOfPointsToAdd + " points.").ToString();
+        }
+        else if (AmountOfPointsToAdd < 0)
+        {
+            PickUpResult.text = ("You lost " + AmountOfPointsToAdd + " points.").ToString();
+        }
+        else
+        {
+            PickUpResult.text = "You neither won or lost any points.";
+        }
+        Destroy(SpecialAxe);
     }
 }

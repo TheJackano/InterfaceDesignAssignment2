@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
@@ -22,16 +23,14 @@ public class PlayerController : MonoBehaviour
     Quaternion newRotation;
     float rotSpeed = 5f;
 
-    // Use this for initialization
     void Start()
     {
         myAnim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
 
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
