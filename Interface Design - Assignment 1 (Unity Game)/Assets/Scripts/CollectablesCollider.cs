@@ -22,6 +22,13 @@ public class CollectablesCollider : MonoBehaviour {
         {
             cc.AddPlaceToList(gameObject);
         }
-		Destroy (gameObject);
+        if (gameObject.name.Contains("Special Axe"))
+        {
+            cc.SpecialItem(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
 	}
 }

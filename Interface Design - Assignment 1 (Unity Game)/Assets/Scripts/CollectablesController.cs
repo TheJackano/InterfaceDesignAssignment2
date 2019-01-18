@@ -5,9 +5,10 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine.UI;
 
-public class CollectablesController : MonoBehaviour {
+public class CollectablesController : MonoBehaviour
+{
 
-	public CollectablesData[] cd;
+    public CollectablesData[] cd;
     public PlacesData[] pd;
 
     public GameObject prefabPlacesList;
@@ -25,76 +26,76 @@ public class CollectablesController : MonoBehaviour {
     public int Points;
 
     void Awake()
-	{
-		DontDestroyOnLoad (gameObject);
-		if(FindObjectsOfType(GetType()).Length >1)
-		{
-			Destroy (gameObject);
-		}
-	}
-	void Update()
-	{
-		if (Input.GetKeyDown ("l"))
-		{
-			Debug.Log ("Loading Data..");
-			LoadData();
-		}
-		else if (Input.GetKeyDown ("s"))
-		{
-			Debug.Log("Saving Data..");
-			SaveData();
-		}
+    {
+        DontDestroyOnLoad(gameObject);
+        if (FindObjectsOfType(GetType()).Length > 1)
+        {
+            Destroy(gameObject);
+        }
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown("l"))
+        {
+            Debug.Log("Loading Data..");
+            LoadData();
+        }
+        else if (Input.GetKeyDown("s"))
+        {
+            Debug.Log("Saving Data..");
+            SaveData();
+        }
         UpdateHealthBar();
         UpdatePoints();
-	}
+    }
 
     void Start()
     {
         sideMenuAnim.enabled = false;
     }
-	public void IncrementCount(GameObject go)
-	{
-		if (go.name.Contains("Aid Box"))
-		{
-			cd [0].CollectablesNumber++;
+    public void IncrementCount(GameObject go)
+    {
+        if (go.name.Contains("Aid Box"))
+        {
+            cd[0].CollectablesNumber++;
             HealthPackTextField.text = cd[0].CollectablesNumber.ToString();
 
         }
-		else if (go.name.Contains("Gem"))
-		{
-			cd [1].CollectablesNumber++;
+        else if (go.name.Contains("Gem"))
+        {
+            cd[1].CollectablesNumber++;
             GemsTextField.text = cd[1].CollectablesNumber.ToString();
         }
-		else if (go.name.Contains("Chicken Leg"))
-		{
-			cd [2].CollectablesNumber++;
+        else if (go.name.Contains("Chicken Leg"))
+        {
+            cd[2].CollectablesNumber++;
             FoodTextField.text = cd[2].CollectablesNumber.ToString();
         }
         itemsCollected += 1;
     }
-	public void SaveData()
-	{
-		BinaryFormatter bf = new BinaryFormatter ();
-		FileStream fs = File.Create (Application.persistentDataPath + "/gameData.dat");
-		bf.Serialize (fs, cd);
-		fs.Close ();
-		Debug.Log ("Saved Data");
-	}
-	public void LoadData()
-	{
-		if(File.Exists(Application.persistentDataPath + "/gameData.dat"))
-		{
-			BinaryFormatter bf = new BinaryFormatter ();
-			FileStream fs = File.Open (Application.persistentDataPath + "/gameData.dat", FileMode.Open);
-			cd = (CollectablesData[])bf.Deserialize (fs);
-			fs.Close ();
-			Debug.Log ("Loaded Data");
-		}
-		else
-		{
-			Debug.LogError("The file you are trying to load is missing!");
-		}
-	}
+    public void SaveData()
+    {
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream fs = File.Create(Application.persistentDataPath + "/gameData.dat");
+        bf.Serialize(fs, cd);
+        fs.Close();
+        Debug.Log("Saved Data");
+    }
+    public void LoadData()
+    {
+        if (File.Exists(Application.persistentDataPath + "/gameData.dat"))
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream fs = File.Open(Application.persistentDataPath + "/gameData.dat", FileMode.Open);
+            cd = (CollectablesData[])bf.Deserialize(fs);
+            fs.Close();
+            Debug.Log("Loaded Data");
+        }
+        else
+        {
+            Debug.LogError("The file you are trying to load is missing!");
+        }
+    }
     public void AddPlaceToList(GameObject go)
     {
         prefabPlacesList = Instantiate(prefabPlacesList);
@@ -145,7 +146,7 @@ public class CollectablesController : MonoBehaviour {
     public void UpdateHealthBar()
     {
         healthBar.fillAmount -= 0.01f * Time.deltaTime;
-        if(healthBar.fillAmount <= 0) Debug.Log("Times UP");
+        if (healthBar.fillAmount <= 0) Debug.Log("Times UP");
 
     }
     public void UpdatePoints()
@@ -153,5 +154,9 @@ public class CollectablesController : MonoBehaviour {
         Points = (int)(itemsCollected * 10 + placesVisted * 100 - PlayerController.StepsTaken);
         if (Points <= 0) Points = 0;
         PointsTextField.text = Points.ToString();
+    }
+    public void SpecialItem(GameObject go)
+    {
+        Debug.Log("Touching Axe");
     }
 }
