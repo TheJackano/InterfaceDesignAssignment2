@@ -2,8 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class HighscoreData
 {
     public string Username;
-    public string Score;
+    public int Score;
+
+    public HighscoreData(string _Username, int _Score)
+    {
+        Username = _Username;
+        Score = _Score;
+    }
 }

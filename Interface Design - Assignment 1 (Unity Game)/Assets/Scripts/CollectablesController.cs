@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CollectablesController : MonoBehaviour
 {
@@ -35,7 +36,7 @@ public class CollectablesController : MonoBehaviour
     public static bool isGamePaused = false;
 
     public Text PickUpResult;
-
+    /*
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -44,6 +45,7 @@ public class CollectablesController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    */
     void Update()
     {
         UpdateHealthBar();
@@ -120,9 +122,13 @@ public class CollectablesController : MonoBehaviour
     }
     public void UpdateHealthBar()
     {
-        healthBar.fillAmount -= 0.01f * Time.deltaTime;
-        if (healthBar.fillAmount <= 0) Debug.Log("Times UP");
-
+        healthBar.fillAmount -= 0.05f * Time.deltaTime;
+        if (healthBar.fillAmount <= 0)
+        {
+            MenuController.CurrentPlayersFinalScore = Points;
+            MenuController.finishedLevel = true;
+            SceneManager.LoadScene(0);
+        }
     }
     public void UpdatePoints()
     {
