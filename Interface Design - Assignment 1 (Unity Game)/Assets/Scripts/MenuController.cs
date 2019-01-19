@@ -21,8 +21,8 @@ public class MenuController : MonoBehaviour
 
     List<HighscoreData> hd = new List<HighscoreData>();
 
-    public Text FirstPlaceUsername, SecondPlaceUsername;
-    public Text FirstPlaceScore, SecondPlaceScore;
+    public Text FirstPlaceUsername, SecondPlaceUsername, ThirdPlaceUsername, FourthPlaceUsername, FifthPlaceUsername, SixthPlaceUsername, SeventhPlaceUsername , EighthPlaceUsername, NinthPlaceUsername, TenthPlaceUsername;
+    public Text FirstPlaceScore, SecondPlaceScore, ThirdPlaceScore, FourthPlaceScore, FifthPlaceScore, SixthPlaceScore, SeventhPlaceScore, EighthPlaceScore, NinthPlaceScore, TenthPlaceScore;
 
     public Text PlayersUsernameTextField, PlayersScoreTextField;
 
@@ -38,6 +38,10 @@ public class MenuController : MonoBehaviour
     public void SetUsername()
     {
         PlayerData.Username = InputFieldUsername.text;
+    }
+    public void RetryGame()
+    {
+        SceneManager.LoadScene(1);
     }
     public void PlayGame()
     {
@@ -99,6 +103,9 @@ public class MenuController : MonoBehaviour
     public void AddPlayerToList()
     {
         hd.Add(new HighscoreData(PlayerData.Username, CurrentPlayersFinalScore));
+        Debug.Log("Username :" + hd[hd.Count- 1].Username + "Score: : " + hd[hd.Count-1].Score);
+        Debug.Log("Size of list: " + hd.Count);
+        Debug.Log("Player Added to List");
     }
     public void BubbleSortingScores()
     {
@@ -106,12 +113,13 @@ public class MenuController : MonoBehaviour
         {
             for (int j = 0; j < hd.Count - i - 1; j++)
             {
-                if (hd[j].Score < hd[j + 1].Score) //If the data in J is less than the Data in J + 1
+                if (hd[j].Score < hd[j + 1].Score)
                 {
-                    List<HighscoreData> temp = new List<HighscoreData>(); //Create a temp data storage to swap the information 
-                    temp[0].Score = hd[j + 1].Score; //Here you will copy of the of the data from [j+1]
-                    hd[j + 1].Score = hd[j].Score;
-                    hd[j].Score = temp[0].Score;
+                    List<HighscoreData> temp = new List<HighscoreData>();
+                    if (temp.Count == 0)temp.Add(new HighscoreData("temp", (int)0));
+                    temp[0] = hd[j + 1];
+                    hd[j + 1] = hd[j];
+                    hd[j] = temp[0];
                 }
             }
         }
@@ -121,57 +129,56 @@ public class MenuController : MonoBehaviour
         PlayersUsernameTextField.text = PlayerData.Username;
         PlayersScoreTextField.text = CurrentPlayersFinalScore.ToString();
 
-        FirstPlaceUsername.text = hd[0].Username;
-        SecondPlaceUsername.text = hd[1].Username;
-
-        FirstPlaceScore.text = hd[0].Score.ToString();
-        SecondPlaceScore.text = hd[1].Score.ToString();
-
-}
-
-    /*
-    As you can see, what the purpose of the algorithm is to check
-
-which data is bigger, j or j+1. If they are the same or j is bigger than j+1
-
-then nothing happens.This then repeats.It goes through each element in the array.
-
-
-
-Some key elements of the algorithm:
-
-in the second for loop - j<j<cd.length - i - 1 - The reason why we do this 
-
-is because after the first iteration of loops, the smallest value will always be at the end.
-
-So we only need to go through 1 fewer times.This is why we subtract i;
-
-
-
-    Second thing is the actual swapping.Now I had to guess because I dont know exactly what you store in 
-
-each element of the array.However, I used data as the main value.Im guessing it stores an int which is the best
-
-cause it is easy to tell which is bigger.You will need to transfer ALL data stored in each element.any strings,
-
-floats, ints.What ever, they need to be swapped and that is done through the temp object created. It stores
-
-
-one set of data so that it is not deleted when it is copied.
-
-
-
-I hope this makes sense and it is the easiest way to get the biggest value to the front with ease.
-
-
-
-Topics that are used in this if you need to quickly revise them. 
-
- - arrays
-
- - bubble sort algorithm
-
- - for loops + nested for loops
- */
+        if(hd.Count >= 1)
+        {
+            FirstPlaceUsername.text = hd[0].Username;
+            FirstPlaceScore.text = (hd[0].Score).ToString();
+        }
+        if (hd.Count >= 2)
+        {
+            SecondPlaceUsername.text = hd[1].Username;
+            SecondPlaceScore.text = (hd[1].Score).ToString();
+        }
+        if (hd.Count >= 3)
+        {
+            ThirdPlaceUsername.text = hd[2].Username;
+            ThirdPlaceScore.text = (hd[2].Score).ToString();
+        }
+        if (hd.Count >= 4)
+        {
+            FourthPlaceUsername.text = hd[3].Username;
+            FourthPlaceScore.text = (hd[3].Score).ToString();
+        }
+        if (hd.Count >= 5)
+        {
+            FifthPlaceUsername.text = hd[4].Username;
+            FifthPlaceScore.text = (hd[4].Score).ToString();
+        }
+        if (hd.Count >= 6)
+        {
+            SixthPlaceUsername.text = hd[5].Username;
+            SixthPlaceScore.text = (hd[5].Score).ToString();
+        }
+        if (hd.Count >= 7)
+        {
+            SeventhPlaceUsername.text = hd[6].Username;
+            SeventhPlaceScore.text = (hd[6].Score).ToString();
+        }
+        if (hd.Count >= 8)
+        {
+            EighthPlaceUsername.text = hd[7].Username;
+            EighthPlaceScore.text = (hd[7].Score).ToString();
+        }
+        if (hd.Count >= 9)
+        {
+            NinthPlaceUsername.text = hd[8].Username;
+            NinthPlaceScore.text = (hd[8].Score).ToString();
+        }
+        if (hd.Count >= 10)
+        {
+            TenthPlaceUsername.text = hd[9].Username;
+            TenthPlaceScore.text = (hd[9].Score).ToString();
+        }
     }
+}
 

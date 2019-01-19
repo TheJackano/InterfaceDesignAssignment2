@@ -58,6 +58,7 @@ public class CollectablesController : MonoBehaviour
     void Start()
     {
         sideMenuAnim.enabled = false;
+        PlayerController.StepsTaken = 0;
     }
     public void IncrementCount(GameObject go)
     {

@@ -1719,7 +1719,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Game
+  m_Text: Retry
 --- !u!222 &453324163
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2397,7 +2397,7 @@ GameObject:
   - component: {fileID: 552465950}
   - component: {fileID: 552465949}
   m_Layer: 5
-  m_Name: Button_NewGame
+  m_Name: Button_Retry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2411,16 +2411,16 @@ RectTransform:
   m_GameObject: {fileID: 552465947}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.42592132, y: 0.42592144, z: 0.42592144}
+  m_LocalScale: {x: 0.4259213, y: 0.42592144, z: 0.42592144}
   m_Children:
   - {fileID: 453324161}
-  m_Father: {fileID: 648257087}
-  m_RootOrder: 0
+  m_Father: {fileID: 1264029331}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.2500162, y: 96.7}
-  m_SizeDelta: {x: 410.9, y: 145.4}
+  m_AnchoredPosition: {x: -111.1, y: -197.7}
+  m_SizeDelta: {x: 286.25, y: 101.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &552465949
 MonoBehaviour:
@@ -2462,20 +2462,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 996017612}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1627823882}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 921338780}
+        m_MethodName: RetryGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2821,7 +2810,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 552465948}
   - {fileID: 743335884}
   - {fileID: 1603046385}
   - {fileID: 1501703456}
@@ -3407,7 +3395,7 @@ RectTransform:
   m_Children:
   - {fileID: 1693205661}
   m_Father: {fileID: 648257087}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3860,7 +3848,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &921338779
 Transform:
@@ -3893,8 +3881,24 @@ MonoBehaviour:
   CanvasMainMenu: {fileID: 477892539}
   FirstPlaceUsername: {fileID: 1222073058}
   SecondPlaceUsername: {fileID: 1492839362}
+  ThirdPlaceUsername: {fileID: 712495106}
+  FourthPlaceUsername: {fileID: 952802900}
+  FifthPlaceUsername: {fileID: 1295160072}
+  SixthPlaceUsername: {fileID: 1102799910}
+  SeventhPlaceUsername: {fileID: 772696991}
+  EighthPlaceUsername: {fileID: 1783437603}
+  NinthPlaceUsername: {fileID: 792454176}
+  TenthPlaceUsername: {fileID: 1588265809}
   FirstPlaceScore: {fileID: 1266968200}
   SecondPlaceScore: {fileID: 65806963}
+  ThirdPlaceScore: {fileID: 1176764058}
+  FourthPlaceScore: {fileID: 1631165394}
+  FifthPlaceScore: {fileID: 1471305618}
+  SixthPlaceScore: {fileID: 481601198}
+  SeventhPlaceScore: {fileID: 738781998}
+  EighthPlaceScore: {fileID: 438699377}
+  NinthPlaceScore: {fileID: 697056029}
+  TenthPlaceScore: {fileID: 2072304684}
   PlayersUsernameTextField: {fileID: 673742884}
   PlayersScoreTextField: {fileID: 1160856334}
 --- !u!82 &921338781
@@ -5641,6 +5645,7 @@ RectTransform:
   - {fileID: 800779394}
   - {fileID: 652443877}
   - {fileID: 648257087}
+  - {fileID: 552465948}
   m_Father: {fileID: 1627823886}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6969,7 +6974,7 @@ RectTransform:
   m_Children:
   - {fileID: 61280131}
   m_Father: {fileID: 648257087}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7456,7 +7461,7 @@ RectTransform:
   m_Children:
   - {fileID: 178760546}
   m_Father: {fileID: 648257087}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
