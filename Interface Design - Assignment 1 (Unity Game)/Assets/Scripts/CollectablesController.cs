@@ -123,7 +123,7 @@ public class CollectablesController : MonoBehaviour
     }
     public void UpdateHealthBar()
     {
-        healthBar.fillAmount -= 0.05f * Time.deltaTime;
+        healthBar.fillAmount -= 0.02f * Time.deltaTime;
         if (healthBar.fillAmount <= 0)
         {
             MenuController.CurrentPlayersFinalScore = Points;
