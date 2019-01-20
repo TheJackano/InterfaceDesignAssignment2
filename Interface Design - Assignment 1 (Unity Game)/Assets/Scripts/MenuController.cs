@@ -210,5 +210,9 @@ public class MenuController : MonoBehaviour
 
         PlayersPositionTextField.text = (whereOnScoreboardNumber + 1).ToString();
     }
+    public void ClearUsername()
+    {
+        PlayerData.Username = "";
+    }
 }
 

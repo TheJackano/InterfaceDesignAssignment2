@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     public Camera camera;
     public NavMeshAgent agent;
+    public AudioSource StepsSound;
 
     public Text StepsTakenTextField;
     public static float StepsTaken;
@@ -54,12 +55,14 @@ public class PlayerController : MonoBehaviour
         {
             myAnim.SetBool("isRunning", false);
             agent.isStopped = true;
+            StepsSound.Pause();
         }
         else
         {
             agent.isStopped = false;
             StepsTaken += 4f * Time.deltaTime;
             StepsTakenTextField.text = ((int)StepsTaken).ToString();
+            StepsSound.UnPause();
         }
     }
 }

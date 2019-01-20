@@ -632,7 +632,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0000
+  m_Text: '........'
 --- !u!222 &65806964
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1631,7 +1631,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0000
+  m_Text: '........'
 --- !u!222 &438699378
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2084,7 +2084,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0000
+  m_Text: '........'
 --- !u!222 &481601199
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3123,7 +3123,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0000
+  m_Text: '........'
 --- !u!222 &697056030
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3197,7 +3197,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Username
+  m_Text: '..................'
 --- !u!222 &712495107
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3347,7 +3347,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0000
+  m_Text: '........'
 --- !u!222 &738781999
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3421,7 +3421,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Username
+  m_Text: '..................'
 --- !u!222 &772696992
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3495,7 +3495,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Username
+  m_Text: '..................'
 --- !u!222 &792454177
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3792,7 +3792,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ead00e6d59f255c4c9ffaf55f4d5d114, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4222,7 +4222,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Username
+  m_Text: '..................'
 --- !u!222 &952802901
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4813,7 +4813,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Username
+  m_Text: '..................'
 --- !u!222 &1102799911
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5219,7 +5219,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0000
+  m_Text: '........'
 --- !u!222 &1176764059
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5365,7 +5365,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Username
+  m_Text: '..................'
 --- !u!222 &1222073059
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5513,7 +5513,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0000
+  m_Text: '........'
 --- !u!222 &1266968201
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5778,7 +5778,29 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 921338780}
-        m_MethodName: Highscore
+        m_MethodName: ClearUsername
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 921338780}
+        m_MethodName: LoadData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 921338780}
+        m_MethodName: UpdateDisplayinScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5890,7 +5912,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Username
+  m_Text: '..................'
 --- !u!222 &1295160073
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6666,7 +6688,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0000
+  m_Text: '........'
 --- !u!222 &1471305619
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6740,7 +6762,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Username
+  m_Text: '..................'
 --- !u!222 &1492839363
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7227,7 +7249,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Username
+  m_Text: '..................'
 --- !u!222 &1588265810
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7469,7 +7491,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0000
+  m_Text: '........'
 --- !u!222 &1631165395
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8116,7 +8138,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Username
+  m_Text: '..................'
 --- !u!222 &1783437604
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8821,7 +8843,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0000
+  m_Text: '........'
 --- !u!222 &2072304685
 CanvasRenderer:
   m_ObjectHideFlags: 0

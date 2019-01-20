@@ -36,16 +36,13 @@ public class CollectablesController : MonoBehaviour
     public static bool isGamePaused = false;
 
     public Text PickUpResult;
-    /*
-    void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-        if (FindObjectsOfType(GetType()).Length > 1)
-        {
-            Destroy(gameObject);
-        }
-    }
-    */
+
+    public AudioSource collectablePickUp;
+    public AudioSource placeVisit;
+
+    public Text AssignUsernameToNameTag;
+
+
     void Update()
     {
         UpdateHealthBar();
@@ -59,6 +56,7 @@ public class CollectablesController : MonoBehaviour
     {
         sideMenuAnim.enabled = false;
         PlayerController.StepsTaken = 0;
+        AssignUsernameToNameTag.text = PlayerData.Username;
     }
     public void IncrementCount(GameObject go)
     {
@@ -79,6 +77,7 @@ public class CollectablesController : MonoBehaviour
             FoodTextField.text = cd[2].CollectablesNumber.ToString();
         }
         itemsCollected += 1;
+        collectablePickUp.Play();
     }
     public void AddPlaceToList(GameObject go)
     {
@@ -115,6 +114,7 @@ public class CollectablesController : MonoBehaviour
         }
         placesVisted += 1;
         ShowSideMenu();
+        placeVisit.Play();
     }
     public void ShowSideMenu()
     {
@@ -161,15 +161,15 @@ public class CollectablesController : MonoBehaviour
         AmountOfPointsToAdd = (int)(Random.Range(-200.0f, 200.0f));
         if (AmountOfPointsToAdd > 0)
         {
-            PickUpResult.text = ("You won " + AmountOfPointsToAdd + " points.").ToString();
+            PickUpResult.text = ("You are the Legendry Highscore Man! " + AmountOfPointsToAdd + " points have been awarded to you.").ToString();
         }
         else if (AmountOfPointsToAdd < 0)
         {
-            PickUpResult.text = ("You lost " + AmountOfPointsToAdd + " points.").ToString();
+            PickUpResult.text = ("You are not the Legendry Highscore Man... " + AmountOfPointsToAdd + " points have been taken away.").ToString();
         }
         else
         {
-            PickUpResult.text = "You neither won or lost any points.";
+            PickUpResult.text = "The Special Axe can't tell if you're the Legendry Highscore Man... It then just vanishes into thin air.";
         }
         Destroy(SpecialAxe);
     }
