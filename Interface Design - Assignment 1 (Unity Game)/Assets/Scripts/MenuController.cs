@@ -51,7 +51,7 @@ public class MenuController : MonoBehaviour
     }
     public void PlayGame()
     {
-        if (goCharacterOneSelected.activeSelf == true && PlayerData.Username != null)
+        if (goCharacterOneSelected.activeSelf == true && PlayerData.Username != null && PlayerData.Username != "")
         {
             SceneManager.LoadScene(1);
         }
